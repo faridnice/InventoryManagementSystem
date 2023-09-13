@@ -24,5 +24,19 @@ namespace InventoryManagementSystem
             else
                 txtPass.UseSystemPasswordChar = false;
         }
+
+        private void lblClear_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtPass.Clear();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Exit Application?","Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
