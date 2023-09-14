@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserModuleForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textUserName = new System.Windows.Forms.TextBox();
-            this.textFullName = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textPass = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textPhone = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -75,19 +79,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "User Name:";
             // 
-            // textUserName
+            // txtUserName
             // 
-            this.textUserName.Location = new System.Drawing.Point(135, 111);
-            this.textUserName.Name = "textUserName";
-            this.textUserName.Size = new System.Drawing.Size(371, 22);
-            this.textUserName.TabIndex = 2;
+            this.txtUserName.Location = new System.Drawing.Point(135, 111);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(371, 22);
+            this.txtUserName.TabIndex = 2;
             // 
-            // textFullName
+            // txtFullName
             // 
-            this.textFullName.Location = new System.Drawing.Point(135, 149);
-            this.textFullName.Name = "textFullName";
-            this.textFullName.Size = new System.Drawing.Size(371, 22);
-            this.textFullName.TabIndex = 4;
+            this.txtFullName.Location = new System.Drawing.Point(135, 149);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(371, 22);
+            this.txtFullName.TabIndex = 4;
             // 
             // label3
             // 
@@ -98,12 +102,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Full Name:";
             // 
-            // textPass
+            // txtPass
             // 
-            this.textPass.Location = new System.Drawing.Point(135, 191);
-            this.textPass.Name = "textPass";
-            this.textPass.Size = new System.Drawing.Size(371, 22);
-            this.textPass.TabIndex = 6;
+            this.txtPass.Location = new System.Drawing.Point(135, 191);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(371, 22);
+            this.txtPass.TabIndex = 6;
             // 
             // label4
             // 
@@ -114,12 +118,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Password:";
             // 
-            // textPhone
+            // txtPhone
             // 
-            this.textPhone.Location = new System.Drawing.Point(135, 233);
-            this.textPhone.Name = "textPhone";
-            this.textPhone.Size = new System.Drawing.Size(371, 22);
-            this.textPhone.TabIndex = 8;
+            this.txtPhone.Location = new System.Drawing.Point(135, 233);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(371, 22);
+            this.txtPhone.TabIndex = 8;
             // 
             // label5
             // 
@@ -140,6 +144,7 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -159,6 +164,19 @@
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(521, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // UserModuleForm
             // 
@@ -168,13 +186,13 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textPhone);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textPass);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textFullName);
+            this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textUserName);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -183,6 +201,7 @@
             this.Text = "UserModuleForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,15 +212,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textUserName;
-        private System.Windows.Forms.TextBox textFullName;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textPass;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textPhone;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
