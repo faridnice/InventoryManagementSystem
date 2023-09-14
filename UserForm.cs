@@ -13,18 +13,13 @@ namespace InventoryManagementSystem
 {
     public partial class UserForm : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\binanuarfari\Documents\dbMS.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\binanuarfari\Documents\dbMS.mdf;Integrated Security=False;Connect Timeout=30");
         SqlCommand cm = new SqlCommand();
         SqlDataReader dr;
         public UserForm()
         {
             InitializeComponent();
             LoadUser();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         public void LoadUser()
@@ -37,7 +32,7 @@ namespace InventoryManagementSystem
             while (dr.Read())
             {
                 i++;
-                dgvUser.Rows.Add(i, dr[0].ToString(), dr[0].ToString(), dr[0].ToString(), dr[0].ToString());
+                dgvUser.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
             }
             dr.Close();
             con.Close();
