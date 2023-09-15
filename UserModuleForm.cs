@@ -62,6 +62,7 @@ namespace InventoryManagementSystem
             txtUserName.Clear();
             txtFullName.Clear();
             txtPass.Clear();
+            txtRePass.Clear();
             txtPhone.Clear();
         }
 

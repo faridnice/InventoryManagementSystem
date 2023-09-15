@@ -186,7 +186,7 @@
             this.txtRePass.Location = new System.Drawing.Point(135, 210);
             this.txtRePass.Name = "txtRePass";
             this.txtRePass.Size = new System.Drawing.Size(371, 22);
-            this.txtRePass.TabIndex = 13;
+            this.txtRePass.TabIndex = 7;
             // 
             // label6
             // 
