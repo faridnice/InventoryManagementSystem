@@ -37,5 +37,44 @@ namespace InventoryManagementSystem
             dr.Close();
             con.Close();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            UserModuleForm userModule = new UserModuleForm();
+            userModule.btnSave.Enabled = true;
+            userModule.btnUpdate.Enabled = false;
+            userModule.ShowDialog();
+            LoadUser();
+        }
+
+        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dgvUser.Columns[e.ColumnIndex].Name;
+            if (colName == "Edit")
+            {
+                UserModuleForm userModule = new UserModuleForm();
+                userModule.txtUserName.Text = dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString();
+                userModule.txtFullName.Text = dgvUser.Rows[e.RowIndex].Cells[2].Value.ToString();
+                userModule.txtPass.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
+                userModule.txtPhone.Text = dgvUser.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                userModule.btnSave.Enabled=false;
+                userModule.btnUpdate.Enabled=true;
+                userModule.txtUserName.Enabled = false;
+                userModule.ShowDialog();
+            }
+            else if (colName =="Delete")
+            {
+                if(MessageBox.Show("Are you sure want to delete this user?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    cm = new SqlCommand("DELETE FROM tbUser WHERE username LIKE '"+ dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString() +"'", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User deleted successfully!");
+                }
+            }
+            LoadUser();
+        }
     }
 }

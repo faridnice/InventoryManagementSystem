@@ -71,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 107);
+            this.panel1.Size = new System.Drawing.Size(1035, 107);
             this.panel1.TabIndex = 0;
             // 
             // label6
@@ -149,9 +149,9 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 517);
+            this.panel2.Location = new System.Drawing.Point(0, 534);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1016, 15);
+            this.panel2.Size = new System.Drawing.Size(1035, 15);
             this.panel2.TabIndex = 1;
             // 
             // panelMain
@@ -159,7 +159,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 107);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1016, 410);
+            this.panelMain.Size = new System.Drawing.Size(1035, 427);
             this.panelMain.TabIndex = 2;
             // 
             // btnOrder
@@ -227,12 +227,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 532);
+            this.ClientSize = new System.Drawing.Size(1035, 549);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

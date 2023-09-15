@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new InventoryManagementSystem.CustomerButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.customerButton2 = new InventoryManagementSystem.CustomerButton();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,20 +43,33 @@
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.customerButton2);
+            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 310);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(998, 53);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageHover")));
+            this.btnAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageNormal")));
+            this.btnAdd.Location = new System.Drawing.Point(941, 9);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(45, 38);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -105,18 +118,7 @@
             this.dgvUser.RowTemplate.Height = 24;
             this.dgvUser.Size = new System.Drawing.Size(998, 316);
             this.dgvUser.TabIndex = 1;
-            // 
-            // customerButton2
-            // 
-            this.customerButton2.Image = ((System.Drawing.Image)(resources.GetObject("customerButton2.Image")));
-            this.customerButton2.ImageHover = ((System.Drawing.Image)(resources.GetObject("customerButton2.ImageHover")));
-            this.customerButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customerButton2.ImageNormal")));
-            this.customerButton2.Location = new System.Drawing.Point(941, 9);
-            this.customerButton2.Name = "customerButton2";
-            this.customerButton2.Size = new System.Drawing.Size(45, 38);
-            this.customerButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customerButton2.TabIndex = 11;
-            this.customerButton2.TabStop = false;
+            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
             // Column5
             // 
@@ -166,28 +168,24 @@
             // 
             // Edit
             // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Edit.Frozen = true;
-            this.Edit.HeaderText = "Column5";
+            this.Edit.HeaderText = "";
             this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
             this.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Visible = false;
             this.Edit.Width = 6;
             // 
             // Delete
             // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Delete.Frozen = true;
-            this.Delete.HeaderText = "Column6";
+            this.Delete.HeaderText = "";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
             this.Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Visible = false;
             this.Delete.Width = 6;
             // 
             // UserForm
@@ -203,8 +201,8 @@
             this.Text = "UserForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,7 +212,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.Label label1;
-        private CustomerButton customerButton2;
+        private CustomerButton btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
