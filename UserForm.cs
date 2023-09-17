@@ -13,7 +13,8 @@ namespace InventoryManagementSystem
 {
     public partial class UserForm : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\binanuarfari\Documents\dbMS.mdf;Integrated Security=False;Connect Timeout=30");
+        /*SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\binanuarfari\Documents\dbMS.mdf;Integrated Security=False;Connect Timeout=30");*///database1
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Acer\OneDrive\Documents\dbMS2.mdf;Integrated Security=True;Connect Timeout=30");//database2
         SqlCommand cm = new SqlCommand();
         SqlDataReader dr;
         public UserForm()
